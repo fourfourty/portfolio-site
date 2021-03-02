@@ -1,0 +1,315 @@
+html,
+body {
+  font-size: 20px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Finger Paint", Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+@font-face {
+  font-family: "Finger Paint";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/finger-paint-v10-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("fonts/finger-paint-v10-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/finger-paint-v10-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("fonts/finger-paint-v10-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("fonts/finger-paint-v10-latin-regular.ttf")
+      format("truetype");
+  /* Safari, Android, iOS */
+  /* url("fonts/finger-paint-v10-latin-regular.svg#FingerPaint") format("svg"); Legacy iOS */
+}
+
+@font-face {
+  font-family: "Neucha";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/neucha-v12-cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("fonts/neucha-v12-cyrillic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/neucha-v12-cyrillic-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/neucha-v12-cyrillic-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("fonts/neucha-v12-cyrillic-regular.ttf")
+      format("truetype");
+  /* Safari, Android, iOS */
+  /* url("fonts/neucha-v12-cyrillic-regular.svg#Neucha") format("svg"); Legacy iOS */
+}
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.visible-transform {
+  transform: translate(500px);
+  transition: translate 1.5s;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*header*/
+
+.header {
+  background-color: black;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  opacity: 0.9;
+}
+.header__list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header .list__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+.item__link {
+  color: white;
+}
+
+.header__contacts {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+}
+
+.header__phone {
+  display: flex;
+  place-items: center;
+  color: white;
+  margin-right: 30px;
+}
+.header__mail {
+  display: flex;
+  place-items: center;
+  color: white;
+  margin-right: 30px;
+}
+
+.header__vk {
+  display: flex;
+  place-items: center;
+}
+.header__github {
+  writing-mode: vertical-lr;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  padding-right: 20px;
+  outline: rgb(172, 136, 164);
+}
+
+/*Burger*/
+
+.burger-wrap {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.burger__span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  transition: width 0.5s;
+}
+
+.burger__span:nth-child(2) {
+  margin: 7px 0;
+}
+
+/*page-a*/
+
+.page-a {
+  padding: 100px 0;
+}
+
+.page-a__container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.page-a__list {
+  columns: 2;
+}
+
+.page-a__title {
+  font-size: 25px;
+  padding-right: 50px;
+  font-family: "Neucha";
+  flex-grow: 2;
+  flex-basis: 40%;
+}
+.page-a__h2 {
+  margin-top: 0;
+}
+
+page-a__discr {
+  position: relative;
+}
+
+.page-a__img {
+  width: 500px;
+}
+
+.animate-cont {
+  flex-basis: 100%;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px #ac88a4;
+  opacity: 0;
+  left: 50%;
+}
+
+/*page-b*/
+
+.page-b {
+  position: relative;
+  height: 450px;
+  min-height: 300px;
+  padding: 75px 0;
+}
+
+.page-b__title {
+  position: relative;
+  z-index: 5;
+  padding-left: 20px;
+}
+.page-b__h2 {
+  margin: 0 0 50px 0;
+  font-size: 90px;
+  text-shadow: 0 0 10px #ac88a4;
+}
+
+.page-b__btn {
+  font-size: 30px;
+  padding: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0 10px 10px rgb(172, 136, 164);
+  color: tomato;
+  transition: 0.5s;
+  outline: rgb(172, 136, 164);
+}
+
+.page-b__btn a {
+  text-decoration: none;
+  color: tomato;
+}
+
+.page-b__btn:hover,
+.page-b__btn:focus,
+.page-b__btn:active {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.page-b .swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_img {
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  transition: 2s;
+}
+
+.page-b:hover .slide_img,
+.page-b:focus .slide_img,
+.page-b:active .slide_img {
+  filter: brightness(70%);
+  transition: 2s;
+}
+
+.page-b:hover .page-b__btn,
+.page-b:focus .page-b__btn,
+.page-b:active .page-b__btn {
+  background-color: whitesmoke;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+/*page-c*/
+
+.page-c {
+  padding: 75px 0 100px 0;
+  transition: 0.5s linear all;
+}
+
+.page-c__container {
+  flex-direction: row-reverse;
+}
+
+.page-c__h2 {
+  font-size: 200px;
+  margin: 0;
+  line-height: 150px;
+  border-left: 3px solid black;
+  display: flex;
+}
+.page-c__h3 {
+  font-size: 200px;
+  margin: 0;
+  line-height: 150px;
+  display: flex;
+}
+
+.page-c__list {
+  margin: 0;
+  padding: 0 0 0 50px;
+  border-top: 3px solid black;
+}
+
+.page-c__list .list__item {
+  font-family: "Neucha";
+  list-style-type: disc;
+  padding-top: 40px;
+  font-size: 40px;
+}
+
+/*footer*/
+
+.footer {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  padding: 15px 0;
+}
