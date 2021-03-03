@@ -136,7 +136,7 @@ a {
   height: 3px;
   background-color: white;
   display: block;
-  transition: width 0.5s;
+  transition: all 0.5s;
 }
 
 .burger__span:nth-child(2) {
@@ -331,6 +331,16 @@ page-a__discr {
 
 @media (max-width: 1024px) {
   /*header*/
+  .rotate_1 {
+    transform: translateY(10px) rotate(40deg);
+  }
+
+  .rotate_2 {
+    transform: rotate(-40deg);
+  }
+  .rotate_3 {
+    transform: translateY(-10px) rotate(-40deg);
+  }
 
   .header__list {
     position: fixed;
@@ -448,6 +458,8 @@ page-a__discr {
   .header .icon {
     padding-right: 20px;
     margin: 0;
+    width: 20px;
+    height: 20px;
   }
 
   .header .header__phone,
@@ -463,6 +475,9 @@ page-a__discr {
     font-size: 60px;
   }
   /*page-c*/
+  .page-c {
+    padding-top: 65px;
+  }
   .page-c__title {
     padding-top: 35px;
   }
@@ -844,17 +859,6 @@ a:active {
   outline-color: #ac88a4;
 }
 
-.welcome-animate {
-  background-color: black;
-  z-index: 101;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  place-items: center;
-}
-
 .fadeout {
   transform: translateX(-100%);
   transition: 2s;
@@ -919,7 +923,6 @@ a:active {
 .burger-wrap:hover .burger__span:first-child,
 .burger-wrap:focus .burger__span:first-child,
 .burger-wrap:active .burger__span:first-child {
-  width: 20px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }
@@ -927,7 +930,6 @@ a:active {
 .burger-wrap:hover .burger__span:nth-child(2),
 .burger-wrap:focus .burger__span:nth-child(2),
 .burger-wrap:active .burger__span:nth-child(2) {
-  width: 26px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }
@@ -935,7 +937,6 @@ a:active {
 .burger-wrap:hover .burger__span:nth-child(3),
 .burger-wrap:focus .burger__span:nth-child(3),
 .burger-wrap:active .burger__span:nth-child(3) {
-  width: 28px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }
@@ -1056,7 +1057,6 @@ a:active {
   height: 210px;
   filter: brightness(100%);
   margin: 5px;
-  cursor: pointer;
   display: flex;
 }
 .portfolio__img {
@@ -1086,14 +1086,16 @@ a:active {
 }
 
 .portfolio__discr {
+  cursor: pointer;
   display: flex;
+  justify-content: center;
   place-items: center;
   text-align: center;
   font-size: 20px;
   opacity: 0;
   width: 100px;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   border: none;
   border-top-right-radius: 10%;
   border-bottom-right-radius: 10%;
@@ -1102,6 +1104,7 @@ a:active {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 1;
   transition: 0.2s all;
 }
 
@@ -1109,13 +1112,13 @@ a:active {
   color: white;
 }
 
-.portfolio__content:hover .portfolio__img {
-  filter: brightness(50%);
+.portfolio__content:hover .portfolio__discr {
+  background-color: black;
   transition: 1s all;
 }
-.portfolio__content:hover .portfolio__discr {
+
+.fade-discr {
   opacity: 1;
-  transition: 2s all;
 }
 
 @media (max-width: 768px) {
@@ -1175,6 +1178,8 @@ a:active {
   .portfolio-header .icon {
     padding-right: 20px;
     margin: 0;
+    width: 20px;
+    height: 20px;
   }
 
   .portfolio-header .header__phone,
