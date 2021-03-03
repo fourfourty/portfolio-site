@@ -8,6 +8,16 @@
 
 @media (max-width: 1024px) {
   /*header*/
+  .rotate_1 {
+    transform: translateY(10px) rotate(40deg);
+  }
+
+  .rotate_2 {
+    transform: rotate(-40deg);
+  }
+  .rotate_3 {
+    transform: translateY(-10px) rotate(-40deg);
+  }
 
   .header__list {
     position: fixed;
@@ -125,6 +135,8 @@
   .header .icon {
     padding-right: 20px;
     margin: 0;
+    width: 20px;
+    height: 20px;
   }
 
   .header .header__phone,
@@ -140,6 +152,9 @@
     font-size: 60px;
   }
   /*page-c*/
+  .page-c {
+    padding-top: 65px;
+  }
   .page-c__title {
     padding-top: 35px;
   }

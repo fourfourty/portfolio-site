@@ -7,17 +7,6 @@ a:active {
   outline-color: #ac88a4;
 }
 
-.welcome-animate {
-  background-color: black;
-  z-index: 101;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  place-items: center;
-}
-
 .fadeout {
   transform: translateX(-100%);
   transition: 2s;
@@ -82,7 +71,6 @@ a:active {
 .burger-wrap:hover .burger__span:first-child,
 .burger-wrap:focus .burger__span:first-child,
 .burger-wrap:active .burger__span:first-child {
-  width: 20px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }
@@ -90,7 +78,6 @@ a:active {
 .burger-wrap:hover .burger__span:nth-child(2),
 .burger-wrap:focus .burger__span:nth-child(2),
 .burger-wrap:active .burger__span:nth-child(2) {
-  width: 26px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }
@@ -98,7 +85,6 @@ a:active {
 .burger-wrap:hover .burger__span:nth-child(3),
 .burger-wrap:focus .burger__span:nth-child(3),
 .burger-wrap:active .burger__span:nth-child(3) {
-  width: 28px;
   box-shadow: 0 0 10px #ac88a4;
   transition: all 0.5s;
 }

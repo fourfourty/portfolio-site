@@ -38,10 +38,9 @@ import './img/mstile-150x150.png';
 import './img/safari-pinned-tab.svg';
 
 
+
 squareAnim();
 scrollTo;
 ToggleBurger();
 Swiper;
-
-
 

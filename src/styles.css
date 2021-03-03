@@ -136,7 +136,7 @@ a {
   height: 3px;
   background-color: white;
   display: block;
-  transition: width 0.5s;
+  transition: all 0.5s;
 }
 
 .burger__span:nth-child(2) {
@@ -220,20 +220,35 @@ page-a__discr {
   border: none;
   cursor: pointer;
   text-shadow: 0 10px 10px rgb(172, 136, 164);
-  color: tomato;
   transition: 0.5s;
   outline: rgb(172, 136, 164);
 }
 
 .page-b__btn a {
   text-decoration: none;
-  color: tomato;
+  color: black;
 }
 
 .page-b__btn:hover,
 .page-b__btn:focus,
 .page-b__btn:active {
   transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.page-b:hover .page-b__btn,
+.page-b:focus .page-b__btn,
+.page-b:active .page-b__btn {
+  background-color: black;
+  padding: 20px;
+  margin: 0 auto;
+  transition: 1s;
+}
+
+.page-b:hover .page-b__btn a,
+.page-b:focus .page-b__btn a,
+.page-b:active .page-b__btn a {
+  color: white;
   transition: 0.5s;
 }
 
@@ -257,14 +272,6 @@ page-a__discr {
 .page-b:active .slide_img {
   filter: brightness(70%);
   transition: 2s;
-}
-
-.page-b:hover .page-b__btn,
-.page-b:focus .page-b__btn,
-.page-b:active .page-b__btn {
-  background-color: whitesmoke;
-  padding: 10px;
-  transition: 0.5s;
 }
 
 /*page-c*/
