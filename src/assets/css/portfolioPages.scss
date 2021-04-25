@@ -113,6 +113,16 @@
   transition: 1s;
 }
 
+.portfolio__content:hover .portfolio__discript {
+  background-color: transparent;
+  color: #fff;
+}
+
+.portfolio__content:hover .discript__icon{
+  fill: #fff;
+}
+
+
 .fade-discr {
   opacity: 1;
 }

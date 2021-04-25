@@ -60,9 +60,9 @@ window.addEventListener('load', () => {
 const init = () => {
   mySwiper();
   setGrow();
-  getGitData().then((data) => { 
-    return getGithubTemp(data);
-  });
+  // getGitData().then((data) => { 
+  //   return getGithubTemp(data);
+  // });
   showDownLoadWindow();
 }
 init();
