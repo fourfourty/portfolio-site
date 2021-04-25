@@ -301,6 +301,27 @@ a {
   flex-flow: row nowrap;
 }
 
+// .page-a__date {
+//   background-color: #304148;
+//   clip-path: inset(0 0 0 round 10px);
+//   display: flex;
+//   flex-flow: column;
+//   padding: 15px;
+//   max-height: 160px;
+//   place-items: center;
+//   justify-content: center;
+//   margin-right: 10px;
+
+//   .aside-date__numb {
+//     color: #fff;
+//     font-size: 60px;
+//   }
+//   .aside-date__day {
+//     color: #fff;
+//     font-size: 30px;
+//   }
+//}
+
 .page-a__github-content {
   background-color: #304148;
   clip-path: inset(0 0 0 round 10px);
@@ -310,7 +331,7 @@ a {
   font-size: 16px;
   width: 220px;
   max-width: 220px;
-  max-height: 300px;
+  max-height: 320px;
   -webkit-box-shadow: -6px 8px 5px 0px #1b1b1c;
   -moz-box-shadow: -6px 8px 5px 0px #1b1b1c;
   box-shadow: -6px 8px 5px 0px #1b1b1c;
@@ -351,6 +372,36 @@ a {
   display: flex;
   flex-flow: column;
   text-decoration: none;
+
+  .github-content__repos {
+    display: flex;
+    place-items: center;
+    justify-content: space-evenly;
+  }
+
+  .github-content__repos-count {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    color: #000;
+  }
+  .github-content__update {
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+  }
+  .github-content__update-count {
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+  }
 }
 
 .github-content__btn {
@@ -372,8 +423,12 @@ a {
   }
 }
 
-.page-a__mobile-btn {
-  display: none;
+.burger-btn{
+  background-color: transparent;
+  .burger-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 

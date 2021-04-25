@@ -1,5 +1,7 @@
 'use strict';
 
+import getDate from './get-data';
+
 const asideBlockEl = document.querySelector('.page-a__aside');
 
 const getGithubTemp = ( {avatar_url, bio,updated_at,public_repos, name, login, html_url,location} ) => {
@@ -25,8 +27,8 @@ const getGithubTemp = ( {avatar_url, bio,updated_at,public_repos, name, login, h
             <span class="github-content__location">${location}</span>
         </div>
         <div class="github-content__info">
-            <span class="github-content__repos">Количество репозиториев: ${public_repos}</span>
-            <span class="github-content__update"> Последнее обновление: ${cutStr(updated_at)}</span>
+            <span class="github-content__repos">Количество репозиториев:   <span class="github-content__repos-count">${public_repos}</span></span>
+            <span class="github-content__update"> Последнее обновление: <span class="github-content__update-count">${cutStr(updated_at)}</span></span>
             <button class="github-content__btn"><a class="github-content__btn-link btn-link" href="${html_url}" target="_blank"><svg class="aside-block-icon">
             <use xlink:href="assets/img/icons.svg#information"></use>
           </svg><span class="btn-link__discr">Подробнее</span></a></button>
@@ -34,6 +36,7 @@ const getGithubTemp = ( {avatar_url, bio,updated_at,public_repos, name, login, h
     </div>`;
 
     asideBlockEl.insertAdjacentHTML('beforeend', str);
+    // asideBlockEl.insertAdjacentHTML('afterbegin', getDate());
 }
 
 export default getGithubTemp;
