@@ -231,8 +231,7 @@ a {
 .page-a__title {
   font-size: 25px;
   padding-right: 50px;
-  font-family: "Neucha";
-  max-width: 550px; }
+  font-family: "Neucha"; }
 
 .page-a__h2 {
   color: #1b1b1c;
@@ -252,7 +251,7 @@ a {
   font-size: 16px;
   width: 220px;
   max-width: 220px;
-  max-height: 300px;
+  max-height: 320px;
   -webkit-box-shadow: -6px 8px 5px 0px #1b1b1c;
   -moz-box-shadow: -6px 8px 5px 0px #1b1b1c;
   box-shadow: -6px 8px 5px 0px #1b1b1c; }
@@ -287,6 +286,30 @@ a {
   display: flex;
   flex-flow: column;
   text-decoration: none; }
+  .github-content__info .github-content__repos {
+    display: flex;
+    place-items: center;
+    justify-content: space-evenly; }
+  .github-content__info .github-content__repos-count {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    color: #000; }
+  .github-content__info .github-content__update {
+    display: flex;
+    flex-flow: column;
+    place-items: center; }
+  .github-content__info .github-content__update-count {
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px; }
 
 .github-content__btn {
   display: flex;
@@ -304,8 +327,11 @@ a {
     border-radius: 20px;
     transition: 0.5s; }
 
-.page-a__mobile-btn {
-  display: none; }
+.burger-btn {
+  background-color: transparent; }
+  .burger-btn .burger-icon {
+    width: 30px;
+    height: 30px; }
 
 .github-content__btn-link {
   color: #fff;
@@ -1570,6 +1596,9 @@ a:active {
   flex-grow: 1;
   width: 40%; }
 
+.portfolio__polygon {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); }
+
 .portfolio__img {
   width: 100%;
   height: auto;
@@ -1594,7 +1623,7 @@ a:active {
   text-align: center;
   clip-path: inset(0 0 0 round 10px); }
 
-.portfolio__discr {
+.portfolio__link {
   font-family: "Calama";
   cursor: pointer;
   font-size: 30px;
@@ -1614,6 +1643,10 @@ a:active {
   padding-right: 15px;
   transition: 0.5s; }
 
+.discript__icon {
+  fill: black;
+  font-weight: bold; }
+
 .portfolio__link {
   color: black; }
 
@@ -1621,7 +1654,7 @@ a:active {
   background-color: rgba(0, 0, 0, 0.7);
   transition: 1s all; }
 
-.portfolio__content:hover .portfolio__discr {
+.portfolio__content:hover .portfolio__link {
   color: whitesmoke;
   transition: 1s all; }
 
@@ -1630,8 +1663,33 @@ a:active {
   opacity: 1;
   transition: 1s; }
 
+.portfolio__content:hover .portfolio__discript {
+  background-color: transparent;
+  color: #fff; }
+
+.portfolio__content:hover .discript__icon {
+  fill: #fff; }
+
 .fade-discr {
   opacity: 1; }
+
+.portfolio__discript {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #1b1b1c;
+  font-family: "Calama";
+  display: flex;
+  flex-flow: row nowrap;
+  position: absolute;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 10%);
+  font-size: 30px; }
+  .portfolio__discript .discript-content__text {
+    padding-left: 10px; }
 
 @media (max-width: 992px) {
   .portfolio__head {
@@ -1657,7 +1715,12 @@ a:active {
     height: 250px;
     width: 100%; }
   .portfolio__img {
-    object-fit: fill; } }
+    object-fit: fill; }
+  .portfolio__discript {
+    font-size: 20px; }
+  .discript__icon {
+    width: 20px;
+    height: 20px; } }
 
 @media (max-width: 375px) {
   .portfolio__content {
